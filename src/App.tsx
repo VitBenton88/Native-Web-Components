@@ -3,7 +3,7 @@ import { SourceType, MediaQueryTypes } from "./components/Picture"
 
 function App() {
   const fallbackImage = {
-    alt: 'Maine Lighthouse',
+    alt: 'Maine lighthouse during the day',
     loadingStrategy: 'lazy' as 'lazy',
     src: '/lighthouse-1x.jpg',
   }
