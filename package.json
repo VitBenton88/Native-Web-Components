@@ -1,6 +1,7 @@
 {
   "name": "native-html",
   "private": true,
+  "homepage": "https://vitbenton88.github.io/native-web-components/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
