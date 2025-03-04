@@ -7,7 +7,7 @@ type DialogProps = {
   onClose: Function;
 };
 
-const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, isOpen = false }: DialogProps): React.ReactNode => {
+const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, isOpen = false }): React.ReactNode => {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
