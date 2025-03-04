@@ -30,11 +30,15 @@ function App() {
 
   return (
     <>
-      <h3>An image that is loaded by device resolution:</h3>
-      <Picture fallback={fallbackImage} sources={resolutionSources} />
+      <figure>
+        <Picture fallback={fallbackImage} sources={resolutionSources} />
+        <figcaption>An image that is loaded by device resolution 👆</figcaption>
+      </figure>
 
-      <h3>An image that is loaded by device screen width:</h3>
-      <Picture fallback={fallbackImage} sources={widthSources} />
+      <figure>
+        <Picture fallback={fallbackImage} sources={widthSources} />
+        <figcaption>An image that is loaded by device screen width 👆</figcaption>
+      </figure>
     </>
   )
 }
