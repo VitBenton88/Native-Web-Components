@@ -41,12 +41,12 @@ function App() {
       <article>
         <h2>Responsive & dynamic images</h2>
         <figure>
-          <Picture fallback={fallbackImage} sources={resolutionSources} />
+          <Picture img={fallbackImage} sources={resolutionSources} />
           <figcaption>An image that is loaded by device resolution 👆</figcaption>
         </figure>
 
         <figure>
-          <Picture fallback={fallbackImage} sources={widthSources} />
+          <Picture img={fallbackImage} sources={widthSources} />
           <figcaption>An image that is loaded by device size & resolution 👆</figcaption>
         </figure>
       </article>

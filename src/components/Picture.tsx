@@ -30,7 +30,7 @@ interface PictureSource {
   type?: SourceType;
 }
 
-interface FallbackImage {
+interface ImageData {
   alt?: string;
   height?: string;
   width?: string;
@@ -41,7 +41,7 @@ interface FallbackImage {
 }
 
 interface PictureProps {
-  fallback: FallbackImage;
+  img: ImageData;
   sources?: PictureSource[]
 }
 
@@ -49,20 +49,20 @@ const mapSources = ({ media, srcset, type }: PictureSource): React.ReactNode => 
   <source media={media} srcSet={srcset} type={type} />
 );
 
-const Picture: React.FC<PictureProps> = ({ fallback, sources }): React.ReactNode => {
+const Picture: React.FC<PictureProps> = ({ img, sources }): React.ReactNode => {
 
   return (
     <picture>
       {sources?.length ? sources.map(mapSources) : null}
 
       <img 
-        alt={fallback.alt}
-        height={fallback.height}
-        width={fallback.width}
-        loading={fallback.loadingStrategy}
-        src={fallback.src}
-        srcSet={fallback.srcset}
-        sizes={fallback.sizes}
+        alt={img.alt}
+        height={img.height}
+        width={img.width}
+        loading={img.loadingStrategy}
+        src={img.src}
+        srcSet={img.srcset}
+        sizes={img.sizes}
       />
     </picture>
   );
