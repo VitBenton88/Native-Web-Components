@@ -37,7 +37,7 @@ function App() {
 
       <figure>
         <Picture fallback={fallbackImage} sources={widthSources} />
-        <figcaption>An image that is loaded by device screen width 👆</figcaption>
+        <figcaption>An image that is loaded by device screen width & resolution 👆</figcaption>
       </figure>
     </>
   )
