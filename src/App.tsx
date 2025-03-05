@@ -62,28 +62,8 @@ function App() {
 			<hr />
 
 			<article>
-				<h2>Responsive & dynamic images</h2>
-				<figure>
-					<Picture img={fallbackImage} sources={resolutionSources} />
-					<figcaption>An image that is loaded by device resolution 👆</figcaption>
-				</figure>
-
-				<figure>
-					<Picture img={fallbackImage} sources={widthSources} />
-					<figcaption>An image that is loaded by device size & resolution 👆</figcaption>
-				</figure>
-			</article>
-
-
-			<br />
-			<hr />
-
-			<article>
-				<h2>Code blocks</h2>
-				<figure>
-					<figcaption>JavaScript Example:</figcaption>
-					<CodeBlock code={codeString} language="js" />
-			</figure>
+				<h2>File drag & drop</h2>
+				<FileDrop />
 			</article>
 
 			<br />
@@ -140,8 +120,27 @@ function App() {
 			<hr />
 
 			<article>
-				<h2>File drag & drop</h2>
-				<FileDrop />
+				<h2>Code blocks</h2>
+				<figure>
+					<figcaption>JavaScript Example:</figcaption>
+					<CodeBlock code={codeString} language="js" />
+			</figure>
+			</article>
+
+			<br />
+			<hr />
+
+			<article>
+				<h2>Responsive & dynamic images</h2>
+				<figure>
+					<Picture img={fallbackImage} sources={resolutionSources} />
+					<figcaption>An image that is loaded by device resolution 👆</figcaption>
+				</figure>
+
+				<figure>
+					<Picture img={fallbackImage} sources={widthSources} />
+					<figcaption>An image that is loaded by device size & resolution 👆</figcaption>
+				</figure>
 			</article>
 		</>
 	)
