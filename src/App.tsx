@@ -8,6 +8,7 @@ import DetailsDropdown from "./components/DetailsDropdown"
 import Picture from "./components/Picture"
 import { SourceType, MediaQueryTypes } from "./components/Picture"
 import ProgressBar from "./components/ProgressBar";
+import FileDrop from "./components/FileDrop";
 
 function App() {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -116,6 +117,14 @@ function App() {
 				/>
 				<button onClick={() => setProgressValue(progressValue - 1)}>-</button>
 				<button onClick={() => setProgressValue(progressValue + 1)}>+</button>
+			</article>
+
+			<br />
+			<hr />
+
+			<article>
+				<h2>File drag & drop</h2>
+				<FileDrop />
 			</article>
 		</>
 	)
