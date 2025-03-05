@@ -5,15 +5,6 @@
 	text-align: center;
 }
 
-dialog::backdrop {
-	background-image: linear-gradient(45deg,
-			magenta,
-			rebeccapurple,
-			dodgerblue,
-			green);
-	opacity: 0.75;
-}
-
 header .logos {
 	align-items: center;
 	display: flex;
@@ -26,6 +17,19 @@ header .logos img {
 	max-width: 40px;
 }
 
+/* Dialog
+   ========================================================================= */
+dialog::backdrop {
+	background-image: linear-gradient(45deg,
+		magenta,
+		rebeccapurple,
+		dodgerblue,
+		green);
+	opacity: 0.75;
+}
+
+/* File Drop
+   ========================================================================= */
 .file-drop,
 .file-drop p,
 .file-drop .details {
