@@ -14,7 +14,7 @@ header .logos {
 }
 
 header .logos img {
-	max-width: 40px;
+	max-width: 3rem;
 }
 
 /* Dialog
@@ -73,9 +73,10 @@ dialog::backdrop {
    ========================================================================= */
 pre {
 	background-color: darkslategrey;
-	border-radius: 5px;
+	border-radius: 1em;
   line-height: 1.2em;
-	padding: 2em;
+	max-width: 100%;
+	padding: 1em;
 	overflow-x: auto;
   text-align: justify;
 }
