@@ -5,10 +5,12 @@ import Dialog from "./components/Dialog"
 import DetailsDropdown from "./components/DetailsDropdown"
 import Picture from "./components/Picture"
 import { SourceType, MediaQueryTypes } from "./components/Picture"
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [isModalDialogOpen, setIsModalDialogOpen] = useState(false);
+	const [progressValue, setProgressValue] = useState(50);
 
 	const fallbackImage = {
 		alt: 'Maine lighthouse during the day',
@@ -79,6 +81,18 @@ function App() {
 						<button onClick={() => setIsModalDialogOpen(false)}>Close</button>
 					</Dialog>
 				</div>
+			</article>
+
+			<article>
+				<h2>Progress bars</h2>
+				<ProgressBar
+					label='Test progress bar'
+					percentPosition='bottom'
+					showPercentage
+					value={progressValue}
+				/>
+				<button onClick={() => setProgressValue(progressValue - 1)}>-</button>
+				<button onClick={() => setProgressValue(progressValue + 1)}>+</button>
 			</article>
 		</>
 	)
