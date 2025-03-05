@@ -43,7 +43,7 @@ function App() {
 	];
 
 	const codeString = `
-		() => console.log("Hello, world!")
+			() => console.log("Hello, world!")
 	`;
 
 	return (
