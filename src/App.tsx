@@ -1,5 +1,7 @@
 import { useState } from "react";
 import './App.css'
+import ReactSvg from './assets/react.svg'
+import TypeScriptSvg from './assets/ts.svg'
 
 import Dialog from "./components/Dialog"
 import DetailsDropdown from "./components/DetailsDropdown"
@@ -40,7 +42,19 @@ function App() {
 
 	return (
 		<>
-			<h1>Native web components!</h1>
+			<header>
+				<h1>Native web components!</h1>
+				<span>Made with:</span>
+				<div className="logos">
+					<img src={ReactSvg} alt='React.js' />
+					+
+					<img src={TypeScriptSvg} alt='TypeScript' />
+				</div>
+			</header>
+
+			<br />
+			<hr />
+
 			<article>
 				<h2>Responsive & dynamic images</h2>
 				<figure>
