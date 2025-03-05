@@ -73,9 +73,9 @@ dialog::backdrop {
    ========================================================================= */
 pre {
 	background-color: darkslategrey;
+	border-radius: 5px;
   line-height: 1.2em;
 	padding: 2em;
-  text-align: justify;
-	border-radius: 5px;
 	overflow-x: auto;
+  text-align: justify;
 }
