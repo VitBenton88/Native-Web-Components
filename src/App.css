@@ -37,11 +37,11 @@ dialog::backdrop {
 }
 
 .file-drop {
+	background-color: rebeccapurple;
 	border: 2px dashed palegoldenrod;
 	border-radius: 4px;
 	padding: 3em;
 	text-align: center;
-	background-color: rebeccapurple;
 }
 
 .file-drop.is-dragging {
