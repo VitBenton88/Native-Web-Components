@@ -79,4 +79,5 @@ pre {
 	padding: 1em;
 	overflow-x: auto;
   text-align: justify;
+	white-space: pre-wrap;
 }
