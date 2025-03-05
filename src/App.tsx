@@ -9,6 +9,7 @@ import Picture from "./components/Picture"
 import { SourceType, MediaQueryTypes } from "./components/Picture"
 import ProgressBar from "./components/ProgressBar";
 import FileDrop from "./components/FileDrop";
+import CodeBlock from "./components/CodeBlock";
 
 function App() {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -19,14 +20,14 @@ function App() {
 		alt: 'Maine lighthouse during the day',
 		loadingStrategy: 'lazy' as 'lazy',
 		src: './lighthouse-1x.jpg',
-	}
+	};
 
 	const resolutionSources = [
 		{
 			srcset: './lighthouse-1x.jpg 1x, ./lighthouse-2x.jpg 2x, ./lighthouse-3x.jpg 3x',
 			type: 'image/jpeg' as SourceType,
 		},
-	]
+	];
 
 	const widthSources = [
 		{
@@ -39,7 +40,11 @@ function App() {
 			media: '(min-width: 800px)' as MediaQueryTypes,
 			type: 'image/jpeg' as SourceType,
 		},
-	]
+	];
+
+	const codeString = `
+		() => console.log("Hello, world!")
+	`;
 
 	return (
 		<>
@@ -67,6 +72,15 @@ function App() {
 					<Picture img={fallbackImage} sources={widthSources} />
 					<figcaption>An image that is loaded by device size & resolution 👆</figcaption>
 				</figure>
+			</article>
+
+
+			<br />
+			<hr />
+
+			<article>
+				<h2>Code blocks</h2>
+				<CodeBlock code={codeString} />
 			</article>
 
 			<br />
