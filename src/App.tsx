@@ -54,6 +54,9 @@ function App() {
 				</figure>
 			</article>
 
+			<br />
+			<hr />
+
 			<article>
 				<h2>Dropdowns</h2>
 				<DetailsDropdown
@@ -61,6 +64,9 @@ function App() {
 					title="Dropdown title"
 				/>
 			</article>
+
+			<br />
+			<hr />
 
 			<article>
 				<h2>Dialogs and modals</h2>
@@ -82,6 +88,9 @@ function App() {
 					</Dialog>
 				</div>
 			</article>
+
+			<br />
+			<hr />
 
 			<article>
 				<h2>Progress bars</h2>
