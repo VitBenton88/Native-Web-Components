@@ -21,10 +21,10 @@ header .logos img {
    ========================================================================= */
 dialog::backdrop {
 	background-image: linear-gradient(45deg,
-		magenta,
-		rebeccapurple,
-		dodgerblue,
-		green);
+			magenta,
+			rebeccapurple,
+			dodgerblue,
+			green);
 	opacity: 0.75;
 }
 
@@ -50,7 +50,7 @@ dialog::backdrop {
 }
 
 .file-drop .details {
-	background-color: slategray;
+	background-color: darkslategrey;
 	padding: 1em;
 }
 
@@ -64,7 +64,7 @@ dialog::backdrop {
 	transform: scale(1.1);
 }
 
-.file-drop.is-dragging > p {
+.file-drop.is-dragging>p {
 	color: darkblue;
 	transform: scale(2);
 }
@@ -74,10 +74,10 @@ dialog::backdrop {
 pre {
 	background-color: darkslategrey;
 	border-radius: 1em;
-  line-height: 1.2em;
+	line-height: 1.2em;
 	max-width: 100%;
 	padding: 1em;
 	overflow-x: auto;
-  text-align: justify;
+	text-align: justify;
 	white-space: pre-wrap;
 }

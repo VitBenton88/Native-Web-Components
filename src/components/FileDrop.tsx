@@ -49,9 +49,9 @@ const FileDrop: React.FC = () => {
       {fileDetails ? (
         <div className='details'>
           <h3>File Details:</h3>
-          <p>Name: {fileDetails.name}</p>
-          <p>Type: {fileDetails.type}</p>
-          <p>Size: {fileDetails.size} bytes</p>
+          <p><b>Name:</b> {fileDetails.name}</p>
+          <p><b>Type:</b> {fileDetails.type}</p>
+          <p><b>Size:</b> {fileDetails.size} bytes</p>
         </div>
       ) : (
         <p>{emptyStateMessage}</p>
