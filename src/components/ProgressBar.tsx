@@ -22,16 +22,17 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 	// Computed values
 	const labelPositionTop = useMemo(() => labelPosition === 'top', [labelPosition]);
 	const percentPositionTop = useMemo(() => percentPosition === 'top', [percentPosition]);
-	const percentToPrint = useMemo(() => Math.min(Math.max((value / max) * 100, 0), 100), [value, max]); // Set percentage between 0 and 100
+	const percentage = useMemo(() => Math.min(Math.max((value / max) * 100, 0), 100), [value, max]); // Set percentage between 0 and 100
+	const percentToPrint = useMemo(() => `${percentage.toFixed(0)}%`, [percentage]);
 	// Cached methods
 	const renderLabel = useCallback(() => (label ??
 		<label className='progress-bar-label' htmlFor='progress-bar'>
 			{label}
 		</label>
 	), [label]);
-	const renderPercent = useCallback(() => (showPercentage ?
-		<p className='progress-bar-percentage'>{`${percentToPrint.toFixed(0)}%`}</p>
-	: null), [percentToPrint]);
+	const renderPercent = useCallback(() => (showPercentage &&
+		<p className='progress-bar-percentage'>{percentToPrint}</p>
+	), [percentToPrint]);
 
 	return (
 		<div>
