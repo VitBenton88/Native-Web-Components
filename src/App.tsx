@@ -43,7 +43,7 @@ function App() {
 	];
 
 	const codeString = `
-			() => console.log("Hello, world!")
+() => console.log("Hello, world!")
 	`;
 
 	return (
@@ -80,7 +80,10 @@ function App() {
 
 			<article>
 				<h2>Code blocks</h2>
-				<CodeBlock code={codeString} />
+				<figure>
+					<figcaption>JavaScript Example:</figcaption>
+					<CodeBlock code={codeString} language="js" />
+			</figure>
 			</article>
 
 			<br />
