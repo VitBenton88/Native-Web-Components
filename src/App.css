@@ -20,8 +20,8 @@ header .logos {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: 15px;
   gap: 10px;
+  margin-top: 15px;
 }
 
 header .logos img {
