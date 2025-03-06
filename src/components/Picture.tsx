@@ -46,7 +46,7 @@ interface PictureProps {
 }
 
 const mapSources = ({ media, srcset, type }: PictureSource, index: number): React.ReactNode => (
-  <source key={index} media={media} srcSet={srcset} type={type} />
+  <source key={index} media={media} srcSet={srcset} type={type} data-testid='source' />
 );
 
 const Picture: React.FC<PictureProps> = ({ img, sources }): React.ReactNode => {
