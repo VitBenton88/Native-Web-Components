@@ -12,9 +12,10 @@ const ProgressBarDemo: React.FC = (): React.ReactNode => {
 				percentPosition='bottom'
 				showPercentage
 				value={progressValue}
+				data-testid='progress-demo'
 			/>
-			<button onClick={() => setProgressValue(progressValue - 1)}>-</button>
-			<button onClick={() => setProgressValue(progressValue + 1)}>+</button>
+			<button onClick={() => setProgressValue(progressValue - 1)} data-testid='progress-subtract-demo'>-</button>
+			<button onClick={() => setProgressValue(progressValue + 1)} data-testid='progress-add-demo'>+</button>
 		</article>
 	)
 }
