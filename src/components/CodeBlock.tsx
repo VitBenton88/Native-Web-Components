@@ -1,6 +1,6 @@
 import React from 'react';
 
-type Language =
+export type Language =
   | "js"       // JavaScript
   | "ts"       // TypeScript
   | "html"     
