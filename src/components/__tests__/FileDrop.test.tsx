@@ -8,8 +8,7 @@ const mockFile = {
 };
 
 describe('FileDrop', () => {
-  const renderComponent = () =>
-    render(<FileDrop />);
+  const renderComponent = () => render(<FileDrop />);
 
   const elements = {
     get dropzone() { return screen.queryByTestId('dropzone'); },
