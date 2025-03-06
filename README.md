@@ -20,4 +20,32 @@ This repository contains a set of React components meticulously crafted using se
 *   **Easy to Customize:** Simple and intuitive API for easy integration and customization within your React application.
 *   **Comprehensive Unit Tests:** Rigorously tested with Jest and React Testing Library to ensure reliability and prevent regressions.
 
-## Installation
+## Usage
+
+```js
+import { Dialog } from 'your-package-name'; // Replace
+import React from 'react';
+
+const MyComponent = () => {
+  return (
+    <Dialog isOpen={true} onClose={() => console.log("Dialog closed!")}>
+      <h2>My Dialog Title</h2>
+      <p>This is the content of my dialog.</p>
+    </Dialog>
+  );
+};
+```
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure that your code adheres to the project's coding standards and includes comprehensive unit tests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Vit Benton - [https://github.com/VitBenton88](https://github.com/VitBenton88) - [vit@vitbenton.com](mailto:vit@vitbenton.com)
+
+[LinkedIn](https://www.linkedin.com/in/vit-benton/)
