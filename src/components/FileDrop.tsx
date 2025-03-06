@@ -45,6 +45,7 @@ const FileDrop: React.FC = () => {
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
+      data-testid='dropzone'
     >
       {fileDetails ? (
         <div className='details'>

@@ -31,7 +31,7 @@ const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, is
   const classNames = useModal ? 'modal' : '';
 
   return (
-    <dialog data-testid='dialog' className={classNames} ref={dialogRef} onClose={handleClose}>
+    <dialog className={classNames} ref={dialogRef} onClose={handleClose} data-testid='dialog'>
       {children}
     </dialog>
   );
