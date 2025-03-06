@@ -32,7 +32,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 	), [label]);
 	const renderPercent = useCallback((): React.ReactNode => (showPercentage &&
 		<p className='progress-bar-percentage'>{percentToPrint}</p>
-	), [percentToPrint]);
+	), [percentToPrint, showPercentage]);
 
 	return (
 		<div>
