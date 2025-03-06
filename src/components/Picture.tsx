@@ -52,7 +52,7 @@ const mapSources = ({ media, srcset, type }: PictureSource, index: number): Reac
 const Picture: React.FC<PictureProps> = ({ img, sources }): React.ReactNode => {
 
   return (
-    <picture>
+    <picture data-testid='picture'>
       {sources?.length ? sources.map(mapSources) : null}
 
       <img
@@ -63,6 +63,7 @@ const Picture: React.FC<PictureProps> = ({ img, sources }): React.ReactNode => {
         src={img.src}
         srcSet={img.srcset}
         sizes={img.sizes}
+        data-testid='image'
       />
     </picture>
   );
