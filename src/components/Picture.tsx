@@ -30,7 +30,7 @@ interface PictureSource {
   type?: SourceType;
 }
 
-interface ImageData {
+export interface ImageData {
   alt?: string;
   height?: string;
   width?: string;
@@ -55,7 +55,7 @@ const Picture: React.FC<PictureProps> = ({ img, sources }): React.ReactNode => {
     <picture>
       {sources?.length ? sources.map(mapSources) : null}
 
-      <img 
+      <img
         alt={img.alt}
         height={img.height}
         width={img.width}

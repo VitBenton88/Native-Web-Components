@@ -8,7 +8,7 @@ describe('Dialog', () => {
 		children = mockChildNode,
 		useModal = false,
 		isOpen = false,
-		onClose = () => {},
+		onClose = () => { },
 	}) => render(
 		<Dialog
 			children={children}
@@ -23,7 +23,7 @@ describe('Dialog', () => {
 		get mockChildren() { return screen.queryByTestId('mock-child-node'); },
 	};
 
-	afterEach(cleanup); 
+	afterEach(cleanup);
 
 	beforeAll(() => {
 		// Fix due to jsdom not yet supporting the html dialog spec.
@@ -32,32 +32,32 @@ describe('Dialog', () => {
 		) {
 			this.open = true;
 		});
-		
+
 		HTMLDialogElement.prototype.showModal = vi.fn(function mock(
 			this: HTMLDialogElement
 		) {
 			this.open = true;
 		});
-		
+
 		HTMLDialogElement.prototype.close = vi.fn(function mock(
 			this: HTMLDialogElement
 		) {
 			this.open = false;
 		});
 
-			renderComponent({});
+		renderComponent({});
 	});
 
-	describe('renders', () => {	
+	describe('renders', () => {
 		it('should render dialog element', () => {
 			expect(elements.dialog).toBeInTheDocument();
 		});
 
 		describe('with dialog closed', () => {
 			beforeEach(() => {
-				renderComponent({isOpen: false});
+				renderComponent({ isOpen: false });
 			});
-		
+
 			it('should not render visible children nodes', () => {
 				expect(elements.dialog).not.toHaveAttribute('open');
 				expect(elements.mockChildren).toBeInTheDocument();
@@ -66,14 +66,14 @@ describe('Dialog', () => {
 
 			it('should render correct class name', () => {
 				expect(elements.dialog).not.toHaveClass('modal');
-			});	
+			});
 		});
 
 		describe('with dialog open', () => {
 			beforeEach(() => {
-				renderComponent({isOpen: true});
+				renderComponent({ isOpen: true });
 			});
-		
+
 			it('should render visible children nodes', () => {
 				expect(elements.dialog).toHaveAttribute('open');
 				expect(elements.mockChildren).toBeInTheDocument();
@@ -83,9 +83,9 @@ describe('Dialog', () => {
 
 		describe('with useModal', () => {
 			beforeEach(() => {
-				renderComponent({useModal: true});
+				renderComponent({ useModal: true });
 			});
-		
+
 			it('should render correct class name', () => {
 				expect(elements.dialog).toHaveClass('modal');
 			});

@@ -3,34 +3,34 @@ import React from 'react';
 export type Language =
   | "js"       // JavaScript
   | "ts"       // TypeScript
-  | "html"     
-  | "css"      
-  | "json"     
+  | "html"
+  | "css"
+  | "json"
   | "sh"       // Shell/Bash
   | "py"       // Python
-  | "java"     
+  | "java"
   | "cs"       // C#
   | "cpp"      // C++
-  | "php"      
+  | "php"
   | "rb"       // Ruby
-  | "go"       
-  | "swift"    
+  | "go"
+  | "swift"
   | "kt"       // Kotlin
-  | "sql"      
-  | "yaml"     
+  | "sql"
+  | "yaml"
   | "md";      // Markdown
 
 type CodeBlockProps = {
-	code: string;
-	language: Language;
+  code: string;
+  language: Language;
 };
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }): React.ReactNode => {
-	return (
-		<pre>
-			<code data-testid='codeCanvas' className={`language-${language}`}>{code}</code>
-		</pre>
-	);
+  return (
+    <pre>
+      <code data-testid='codeCanvas' className={`language-${language}`}>{code}</code>
+    </pre>
+  );
 };
 
 export default CodeBlock;

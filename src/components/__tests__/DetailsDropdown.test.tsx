@@ -4,7 +4,7 @@ import DetailsDropdown from '../DetailsDropdown';
 const mockProps = { body: 'hello world', title: 'hello title' }
 
 describe('DetailsDropdown', () => {
-	const renderComponent = ({body = 'test body content', title = 'test title'}) =>
+	const renderComponent = ({ body = 'test body content', title = 'test title' }) =>
 		render(<DetailsDropdown body={body} title={title} />);
 
 	const elements = {
@@ -16,11 +16,11 @@ describe('DetailsDropdown', () => {
 		beforeEach(() => {
 			renderComponent(mockProps);
 		});
-	
+
 		it('should render title prop value in summary element', () => {
 			expect(elements.summary).toHaveTextContent(mockProps.title);
 		});
-	
+
 		it('should render body prop value in details element', () => {
 			expect(elements.details).toHaveTextContent(mockProps.body);
 		});

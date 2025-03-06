@@ -40,7 +40,7 @@ const FileDrop: React.FC = () => {
   }, []);
 
   return (
-    <div 
+    <div
       className={classNames}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
