@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%23007ACC.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)](https://react.dev/)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](add_your_tests_status_link_here)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/VitBenton88/Native-Web-Components/actions)
 
 **A collection of accessible React components built with native HTML5 elements for modern and performant web applications.**
 
@@ -23,7 +23,7 @@ This repository contains a set of React components meticulously crafted using se
 ## Usage
 
 ```js
-import { Dialog } from 'your-package-name'; // Replace
+import { Dialog } from 'your-own-directory'; // Replace
 import React from 'react';
 
 const MyComponent = () => {
