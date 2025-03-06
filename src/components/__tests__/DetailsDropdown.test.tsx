@@ -1,15 +1,15 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import DetailsDropdown from '../DetailsDropdown';
 
-const mockProps = { body: 'hello world', title: 'hello title' }
+const mockProps = { body: 'hello world', title: 'hello title' };
 
 describe('DetailsDropdown', () => {
 	const renderComponent = ({ body = 'test body content', title = 'test title' }) =>
 		render(<DetailsDropdown body={body} title={title} />);
 
 	const elements = {
-		get details() { return screen.queryByTestId('details'); },
-		get summary() { return screen.queryByTestId('summary'); },
+		get details() { return screen.getByTestId('details'); },
+		get summary() { return screen.getByTestId('summary'); },
 	};
 
 	afterEach(cleanup);

@@ -6,7 +6,7 @@ describe('CodeBlock', () => {
 		render(<CodeBlock code={code} language={language} />);
 
 	const elements = {
-		get code() { return screen.queryByTestId('codeCanvas'); },
+		get code() { return screen.getByTestId('codeCanvas'); },
 	};
 
 	afterEach(cleanup);

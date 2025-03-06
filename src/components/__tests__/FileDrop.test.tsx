@@ -11,7 +11,7 @@ describe('FileDrop', () => {
   const renderComponent = () => render(<FileDrop />);
 
   const elements = {
-    get dropzone() { return screen.queryByTestId('dropzone'); },
+    get dropzone() { return screen.getByTestId('dropzone'); },
   };
 
   afterEach(cleanup);
@@ -42,7 +42,7 @@ describe('FileDrop', () => {
           files: [file],
         };
 
-        fireEvent.drop(elements.dropzone as HTMLBodyElement, { dataTransfer });
+        fireEvent.drop(elements.dropzone, { dataTransfer });
       });
 
       it('should render file details', () => {

@@ -14,9 +14,9 @@ describe('ProgressBar', () => {
   };
 
   const elements = {
-    get label() { return screen.queryByTestId('label'); },
-    get percentage() { return screen.queryByTestId('percentage'); },
-    get progress() { return screen.queryByTestId('progress-bar'); },
+    get label() { return screen.getByTestId('label'); },
+    get percentage() { return screen.getByTestId('percentage'); },
+    get progress() { return screen.getByTestId('progress-bar'); },
   };
 
   afterEach(cleanup);
@@ -56,7 +56,7 @@ describe('ProgressBar', () => {
       it('should render label element before progress bar', () => {
         waitFor(() => {
           const { label, progress } = elements;
-          const positionResult = label?.compareDocumentPosition(progress as HTMLElement);
+          const positionResult = label.compareDocumentPosition(progress);
 
           expect(positionResult ?? Node.DOCUMENT_POSITION_FOLLOWING).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
         });
@@ -92,7 +92,7 @@ describe('ProgressBar', () => {
       it('should render percentage element before progress bar', () => {
         waitFor(() => {
           const { percentage, progress } = elements;
-          const positionResult = percentage?.compareDocumentPosition(progress as HTMLElement);
+          const positionResult = percentage.compareDocumentPosition(progress);
 
           expect(positionResult ?? Node.DOCUMENT_POSITION_FOLLOWING).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
         });
@@ -107,7 +107,7 @@ describe('ProgressBar', () => {
       it('should render percentage element before progress bar', () => {
         waitFor(() => {
           const { label, progress } = elements;
-          const positionResult = label?.compareDocumentPosition(progress as HTMLElement);
+          const positionResult = label.compareDocumentPosition(progress);
 
           expect(positionResult ?? Node.DOCUMENT_POSITION_FOLLOWING).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
         });
@@ -122,7 +122,7 @@ describe('ProgressBar', () => {
       it('should render percentage element before progress bar', () => {
         waitFor(() => {
           const { percentage, progress } = elements;
-          const positionResult = progress?.compareDocumentPosition(percentage as HTMLElement);
+          const positionResult = progress.compareDocumentPosition(percentage);
 
           expect(positionResult ?? Node.DOCUMENT_POSITION_FOLLOWING).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
         });
