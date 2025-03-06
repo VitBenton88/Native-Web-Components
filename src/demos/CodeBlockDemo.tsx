@@ -10,7 +10,7 @@ const CodeBlockDemo: React.FC = (): React.ReactNode => {
 			<h2>Code blocks</h2>
 			<figure>
 				<figcaption>JavaScript Example:</figcaption>
-					<CodeBlock code={codeString} language="js" />
+				<CodeBlock code={codeString} language="js" />
 			</figure>
 		</article>
 	)
