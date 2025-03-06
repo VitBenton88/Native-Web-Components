@@ -21,8 +21,8 @@ const FileDrop: React.FC = () => {
   };
 
   // Computed values
-  const classNames = useMemo(() => `file-drop ${isDragging ? 'is-dragging' : ''}`, [isDragging]);
-  const emptyStateMessage = useMemo(() => isDragging ? 'You’re going for it! 🚀' : 'Drag and drop a file here 🫳 📁', [isDragging]);
+  const classNames = useMemo((): string => `file-drop ${isDragging ? 'is-dragging' : ''}`, [isDragging]);
+  const emptyStateMessage = useMemo((): string => isDragging ? 'You’re going for it! 🚀' : 'Drag and drop a file here 🫳 📁', [isDragging]);
   // Cached methods
   const handleDrop = useCallback((event: DragEvent<HTMLDivElement>): void => {
     event.preventDefault();
