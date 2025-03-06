@@ -16,9 +16,9 @@ function App() {
 				<h1>Native web components!</h1>
 				<span>Made with:</span>
 				<div className="logos">
-					<img src={ReactSvg} alt='React.js' />
+					<img src={ReactSvg} alt='React.js Icon' />
 					+
-					<img src={TypeScriptSvg} alt='TypeScript' />
+					<img src={TypeScriptSvg} alt='TypeScript Icon' />
 				</div>
 			</header>
 
