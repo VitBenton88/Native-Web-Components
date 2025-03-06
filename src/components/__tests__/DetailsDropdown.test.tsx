@@ -4,13 +4,12 @@ import DetailsDropdown from '../DetailsDropdown';
 const mockProps = { body: 'hello world', title: 'hello title' }
 
 describe('DetailsDropdown', () => {
-	const renderComponent = ({body = 'test body content', title = 'test title'}) => {
-		render(<DetailsDropdown body = {body} title = {title} />);
-	};
+	const renderComponent = ({body = 'test body content', title = 'test title'}) =>
+		render(<DetailsDropdown body={body} title={title} />);
 
 	const elements = {
-		get details() { return screen.getByTestId('details'); },
-		get summary() { return screen.getByTestId('summary'); },
+		get details() { return screen.queryByTestId('details'); },
+		get summary() { return screen.queryByTestId('summary'); },
 	};
 
 	describe('renders', () => {
