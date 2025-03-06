@@ -67,7 +67,7 @@ describe('Picture', () => {
         renderComponent({ img: mockImgData, sources: mockSources });
       });
 
-      it('should render visible picture and img elements', () => {
+      it('should render correct amount of source elements', () => {
         expect(elements.sources.length).toBe(mockSources.length)
       });
 
