@@ -41,10 +41,12 @@ describe('Picture', () => {
     });
 
     it('should render visible picture and img elements', () => {
-      expect(elements.image).toBeInTheDocument();
-      expect(elements.image).toBeVisible();
-      expect(elements.picture).toBeInTheDocument();
-      expect(elements.picture).toBeVisible();
+      const { image, picture } = elements;
+
+      expect(image).toBeInTheDocument();
+      expect(image).toBeVisible();
+      expect(picture).toBeInTheDocument();
+      expect(picture).toBeVisible();
     });
 
     it('should not render any source elements', () => {
@@ -52,14 +54,15 @@ describe('Picture', () => {
     });
 
     it('should render correct img attributes', () => {
+      const { image } = elements;
       const { alt, height, width, loadingStrategy, src, sizes } = mockImgData;
 
-      expect(elements.image).toHaveAttribute('alt', alt);
-      expect(elements.image).toHaveAttribute('height', height);
-      expect(elements.image).toHaveAttribute('width', width);
-      expect(elements.image).toHaveAttribute('loading', loadingStrategy);
-      expect(elements.image).toHaveAttribute('src', src);
-      expect(elements.image).toHaveAttribute('sizes', sizes);
+      expect(image).toHaveAttribute('alt', alt);
+      expect(image).toHaveAttribute('height', height);
+      expect(image).toHaveAttribute('width', width);
+      expect(image).toHaveAttribute('loading', loadingStrategy);
+      expect(image).toHaveAttribute('src', src);
+      expect(image).toHaveAttribute('sizes', sizes);
     });
 
     describe('with sources', () => {
