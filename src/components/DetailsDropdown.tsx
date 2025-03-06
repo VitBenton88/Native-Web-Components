@@ -7,8 +7,8 @@ type DetailsProps = {
 
 const DetailsDropdown: React.FC<DetailsProps> = ({ body, title }): React.ReactNode => {
 	return (
-		<details>
-			<summary>{title}</summary>
+		<details data-testid='details'>
+			<summary data-testid='summary'>{title}</summary>
 			{body}
 		</details>
 	);
