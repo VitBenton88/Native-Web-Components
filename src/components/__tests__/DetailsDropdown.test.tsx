@@ -4,8 +4,8 @@ import DetailsDropdown from '../DetailsDropdown';
 const mockProps = { body: 'hello world', title: 'hello title' }
 
 describe('DetailsDropdown', () => {
-	const renderComponent = ({body='test body content', title='test title'}) => {
-		render(<DetailsDropdown body={body} title={title} />);
+	const renderComponent = ({body = 'test body content', title = 'test title'}) => {
+		render(<DetailsDropdown body = {body} title = {title} />);
 	};
 
 	const elements = {

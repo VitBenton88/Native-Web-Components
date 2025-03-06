@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import CodeBlock, { type Language } from '../CodeBlock';
 
 describe('CodeBlock', () => {
-	const renderComponent = ({code='hello world', language='js' as Language}) => {
-		render(<CodeBlock code={code} language={language} />);
+	const renderComponent = ({code = 'hello world', language = 'js' as Language}) => {
+		render(<CodeBlock code = {code} language = {language} />);
 	};
 
 	const elements = {
