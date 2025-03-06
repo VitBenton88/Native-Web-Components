@@ -77,5 +77,22 @@ describe('DialogDemo', () => {
 				});
 			});
 		});
+
+		describe('when modal demo is opened', () => {
+			beforeEach(() => {
+				waitFor(() => {
+					fireEvent.click(elements.openModalButton);
+				});
+			})
+
+			it('should render expanded modal element', () => {
+				waitFor(() => {
+					const { dialog, modalDialog } = elements;
+
+					expect(dialog).toHaveAttribute('isOpen', false);
+					expect(modalDialog).toHaveAttribute('isOpen', true);
+				});
+			});
+		});
 	});
 });
