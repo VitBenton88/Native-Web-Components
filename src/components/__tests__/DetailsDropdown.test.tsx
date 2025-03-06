@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import DetailsDropdown from '../DetailsDropdown';
 
 const mockProps = { body: 'hello world', title: 'hello title' }
@@ -11,6 +11,8 @@ describe('DetailsDropdown', () => {
 		get details() { return screen.queryByTestId('details'); },
 		get summary() { return screen.queryByTestId('summary'); },
 	};
+
+	afterEach(cleanup);
 
 	describe('renders', () => {
 		describe('default', () => {

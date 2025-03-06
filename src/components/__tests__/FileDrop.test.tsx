@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import FileDrop from '../FileDrop';
 
 const mockFile = {
@@ -13,6 +13,8 @@ describe('FileDrop', () => {
   const elements = {
     get dropzone() { return screen.queryByTestId('dropzone'); },
   };
+
+  afterEach(cleanup);
 
   describe('renders', () => {
     describe('default', () => {

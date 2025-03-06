@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import CodeBlock, { type Language } from '../CodeBlock';
 
 describe('CodeBlock', () => {
@@ -8,6 +8,8 @@ describe('CodeBlock', () => {
 	const elements = {
 		get code() { return screen.queryByTestId('codeCanvas'); },
 	};
+
+	afterEach(cleanup);
 
 	describe('renders', () => {
 		describe('default', () => {
