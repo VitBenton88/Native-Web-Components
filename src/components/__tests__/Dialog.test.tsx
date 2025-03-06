@@ -49,23 +49,25 @@ describe('Dialog', () => {
 	});
 
 	describe('renders', () => {
-		it('should render dialog element', () => {
-			expect(elements.dialog).toBeInTheDocument();
-		});
-
-		describe('with dialog closed', () => {
-			beforeEach(() => {
-				renderComponent({ isOpen: false });
+		describe('default', () => {
+			it('should render dialog element', () => {
+				expect(elements.dialog).toBeInTheDocument();
 			});
 
-			it('should not render visible children nodes', () => {
-				expect(elements.dialog).not.toHaveAttribute('open');
-				expect(elements.mockChildren).toBeInTheDocument();
-				expect(elements.mockChildren).not.toBeVisible();
-			});
+			describe('with dialog closed', () => {
+				beforeEach(() => {
+					renderComponent({ isOpen: false });
+				});
 
-			it('should render correct class name', () => {
-				expect(elements.dialog).not.toHaveClass('modal');
+				it('should not render visible children nodes', () => {
+					expect(elements.dialog).not.toHaveAttribute('open');
+					expect(elements.mockChildren).toBeInTheDocument();
+					expect(elements.mockChildren).not.toBeVisible();
+				});
+
+				it('should render correct class name', () => {
+					expect(elements.dialog).not.toHaveClass('modal');
+				});
 			});
 		});
 

@@ -13,16 +13,18 @@ describe('DetailsDropdown', () => {
 	};
 
 	describe('renders', () => {
-		beforeEach(() => {
-			renderComponent(mockProps);
-		});
+		describe('default', () => {
+			beforeEach(() => {
+				renderComponent(mockProps);
+			});
 
-		it('should render title prop value in summary element', () => {
-			expect(elements.summary).toHaveTextContent(mockProps.title);
-		});
+			it('should render title prop value in summary element', () => {
+				expect(elements.summary).toHaveTextContent(mockProps.title);
+			});
 
-		it('should render body prop value in details element', () => {
-			expect(elements.details).toHaveTextContent(mockProps.body);
+			it('should render body prop value in details element', () => {
+				expect(elements.details).toHaveTextContent(mockProps.body);
+			});
 		});
 	});
 });

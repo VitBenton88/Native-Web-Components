@@ -10,16 +10,18 @@ describe('CodeBlock', () => {
 	};
 
 	describe('renders', () => {
-		beforeEach(() => {
-			renderComponent({ code: 'hello world', language: 'js' });
-		});
+		describe('default', () => {
+			beforeEach(() => {
+				renderComponent({ code: 'hello world', language: 'js' });
+			});
 
-		it('should render code from code prop to visible DOM', () => {
-			expect(elements.code).toHaveTextContent(/hello world/i);
-		});
+			it('should render code from code prop to visible DOM', () => {
+				expect(elements.code).toHaveTextContent(/hello world/i);
+			});
 
-		it('should render correct class from language prop', () => {
-			expect(elements.code).toHaveClass('language-js');
+			it('should render correct class from language prop', () => {
+				expect(elements.code).toHaveClass('language-js');
+			});
 		});
 	});
 });

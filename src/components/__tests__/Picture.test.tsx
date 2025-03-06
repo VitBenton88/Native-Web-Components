@@ -36,33 +36,35 @@ describe('Picture', () => {
   afterEach(cleanup);
 
   describe('renders', () => {
-    beforeEach(() => {
-      renderComponent({});
-    });
+    describe('default', () => {
+      beforeEach(() => {
+        renderComponent({});
+      });
 
-    it('should render visible picture and img elements', () => {
-      const { image, picture } = elements;
+      it('should render visible picture and img elements', () => {
+        const { image, picture } = elements;
 
-      expect(image).toBeInTheDocument();
-      expect(image).toBeVisible();
-      expect(picture).toBeInTheDocument();
-      expect(picture).toBeVisible();
-    });
+        expect(image).toBeInTheDocument();
+        expect(image).toBeVisible();
+        expect(picture).toBeInTheDocument();
+        expect(picture).toBeVisible();
+      });
 
-    it('should not render any source elements', () => {
-      expect(elements.sources.length).toBe(0);
-    });
+      it('should not render any source elements', () => {
+        expect(elements.sources.length).toBe(0);
+      });
 
-    it('should render correct img attributes', () => {
-      const { image } = elements;
-      const { alt, height, width, loadingStrategy, src, sizes } = mockImgData;
+      it('should render correct img attributes', () => {
+        const { image } = elements;
+        const { alt, height, width, loadingStrategy, src, sizes } = mockImgData;
 
-      expect(image).toHaveAttribute('alt', alt);
-      expect(image).toHaveAttribute('height', height);
-      expect(image).toHaveAttribute('width', width);
-      expect(image).toHaveAttribute('loading', loadingStrategy);
-      expect(image).toHaveAttribute('src', src);
-      expect(image).toHaveAttribute('sizes', sizes);
+        expect(image).toHaveAttribute('alt', alt);
+        expect(image).toHaveAttribute('height', height);
+        expect(image).toHaveAttribute('width', width);
+        expect(image).toHaveAttribute('loading', loadingStrategy);
+        expect(image).toHaveAttribute('src', src);
+        expect(image).toHaveAttribute('sizes', sizes);
+      });
     });
 
     describe('with sources', () => {
@@ -73,7 +75,6 @@ describe('Picture', () => {
       it('should render correct amount of source elements', () => {
         expect(elements.sources.length).toBe(mockSources.length)
       });
-
     });
   });
 });
