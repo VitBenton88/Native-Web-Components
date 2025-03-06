@@ -63,6 +63,10 @@ describe('Dialog', () => {
 				expect(elements.mockChildren).toBeInTheDocument();
 				expect(elements.mockChildren).not.toBeVisible();
 			});
+
+			it('should render correct class name', () => {
+				expect(elements.dialog).not.toHaveClass('modal');
+			});	
 		});
 
 		describe('with dialog open', () => {
