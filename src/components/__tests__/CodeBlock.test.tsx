@@ -7,7 +7,7 @@ describe('CodeBlock', () => {
 	};
 
 	const elements = {
-		get code() { return screen.getByRole('code'); },
+		get code() { return screen.getByTestId('codeCanvas'); },
 	};
 
 	describe('renders', () => {
