@@ -24,7 +24,7 @@ export type MediaQueryTypes =
 // Compound media queries combining multiple conditions
 type MediaQuery = MediaQueryTypes | `${MediaQueryTypes} and ${MediaQueryTypes}`;
 
-interface PictureSource {
+export interface PictureSource {
   srcset?: SrcsetStringType;
   media?: MediaQuery;
   type?: SourceType;
