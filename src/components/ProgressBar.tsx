@@ -20,8 +20,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 	showPercentage = false,
 }) => {
 	// Computed values
-	const labelPositionTop = useMemo((): Boolean => labelPosition === 'top', [labelPosition]);
-	const percentPositionTop = useMemo((): Boolean => percentPosition === 'top', [percentPosition]);
+	const labelPositionTop = useMemo((): boolean => labelPosition === 'top', [labelPosition]);
+	const percentPositionTop = useMemo((): boolean => percentPosition === 'top', [percentPosition]);
 	const percentage = useMemo((): number => Math.min(Math.max((value / max) * 100, 0), 100), [value, max]); // Set percentage between 0 and 100
 	const percentToPrint = useMemo((): string => `${percentage.toFixed(0)}%`, [percentage]);
 	// Cached methods

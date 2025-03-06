@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react';
 
 type DialogProps = {
   children?: React.ReactNode;
-  isOpen: Boolean;
-  useModal?: Boolean;
-  onClose: Function;
+  isOpen: boolean;
+  useModal?: boolean;
+  onClose: () => void;
 };
 
 const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, isOpen = false }): React.ReactNode => {
@@ -15,7 +15,8 @@ const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, is
     if (!dialogElement) return;
 
     if (isOpen) {
-      useModal ? dialogElement.showModal() : dialogElement.show();
+      const showMethod = useModal ? 'showModal' : 'show';
+      dialogElement[showMethod]();
     } else {
       dialogElement.close();
     }

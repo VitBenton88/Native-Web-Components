@@ -1,9 +1,9 @@
-import Picture, { type SourceType, type MediaQueryTypes } from "../components/Picture"
+import Picture, { type SourceType, type MediaQueryTypes, type ImageData } from "../components/Picture"
 
 const PictureDemo: React.FC = (): React.ReactNode => {
-	const fallbackImage = {
+	const fallbackImage: ImageData = {
 		alt: 'Maine lighthouse during the day',
-		loadingStrategy: 'lazy' as 'lazy',
+		loadingStrategy: 'lazy',
 		src: './lighthouse-1x.jpg',
 	};
 
