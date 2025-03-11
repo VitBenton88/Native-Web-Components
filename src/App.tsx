@@ -8,6 +8,7 @@ import DropdownsDemo from "./demos/DropdownsDemo"
 import FileDropDemo from "./demos/FileDropDemo"
 import PictureDemo from "./demos/PictureDemo"
 import ProgressBarDemo from "./demos/ProgressBarDemo"
+import MeterDemo from "./demos/MeterDemo"
 
 function App() {
 	return (
@@ -41,6 +42,11 @@ function App() {
 			<hr />
 
 			<ProgressBarDemo />
+
+			<br />
+			<hr />
+
+			<MeterDemo />
 
 			<br />
 			<hr />
