@@ -8,6 +8,7 @@ import DropdownsDemo from "./demos/DropdownsDemo"
 import FileDropDemo from "./demos/FileDropDemo"
 import PictureDemo from "./demos/PictureDemo"
 import ProgressBarDemo from "./demos/ProgressBarDemo"
+import RangeDemo from "./demos/RangeDemo"
 import MeterDemo from "./demos/MeterDemo"
 
 function App() {
@@ -47,6 +48,11 @@ function App() {
 			<hr id='progressbar' />
 
 			<ProgressBarDemo />
+
+			<br />
+			<hr id='range' />
+
+			<RangeDemo />
 
 			<br />
 			<hr id='meter' />
