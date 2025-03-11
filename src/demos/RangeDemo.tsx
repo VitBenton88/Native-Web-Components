@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import RangeSlider from "../components/Range";
+import React, { useState } from "react"
+import RangeSlider from "../components/Range"
 
 const RangeDemo: React.FC = (): React.ReactNode => {
-  const [value, setValue] = useState(50);
+  const [value, setValue] = useState(50)
 
   return (
     <>
@@ -19,7 +19,7 @@ const RangeDemo: React.FC = (): React.ReactNode => {
         <p>Selected Value: {value}</p>
       </article>
     </>
-  );
-};
+  )
+}
 
-export default RangeDemo;
+export default RangeDemo

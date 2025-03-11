@@ -1,6 +1,6 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-type positionOptions = 'top' | 'bottom';
+type positionOptions = 'top' | 'bottom'
 
 export interface ProgressBarProps {
 	label?: string;
@@ -20,21 +20,21 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 	showPercentage = false,
 }) => {
 	// Computed values
-	const labelPositionTop = useMemo((): boolean => labelPosition === 'top', [labelPosition]);
-	const percentPositionTop = useMemo((): boolean => percentPosition === 'top', [percentPosition]);
-	const percentage = useMemo((): number => Math.min(Math.max((value / max) * 100, 0), 100), [value, max]); // Set percentage between 0 and 100
-	const percentToPrint = useMemo((): string => `${percentage.toFixed(0)}%`, [percentage]);
+	const labelPositionTop = useMemo((): boolean => labelPosition === 'top', [labelPosition])
+	const percentPositionTop = useMemo((): boolean => percentPosition === 'top', [percentPosition])
+	const percentage = useMemo((): number => Math.min(Math.max((value / max) * 100, 0), 100), [value, max]) // Set percentage between 0 and 100
+	const percentToPrint = useMemo((): string => `${percentage.toFixed(0)}%`, [percentage])
 	// Cached methods
 	const renderLabel = useCallback((): React.ReactNode => (label ??
 		<label className='progress-bar-label' htmlFor='progress-bar' data-testid='label'>
 			{label}
 		</label>
-	), [label]);
+	), [label])
 	const renderPercent = useCallback((): React.ReactNode => (showPercentage &&
 		<p className='progress-bar-percentage' data-testid='percentage'>
 			{percentToPrint}
 		</p>
-	), [percentToPrint, showPercentage]);
+	), [percentToPrint, showPercentage])
 
 	return (
 		<div>
@@ -52,7 +52,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 			{!labelPositionTop && renderLabel()}
 			{!percentPositionTop && renderPercent()}
 		</div>
-	);
-};
+	)
+}
 
-export default ProgressBar;
+export default ProgressBar
