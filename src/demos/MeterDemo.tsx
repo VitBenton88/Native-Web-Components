@@ -46,14 +46,19 @@ const MeterDemo: React.FC = () => {
   return (
     <article>
       <h2>Meters</h2>
-      {
-        batteryLevel !== null ? (
-          <Meter id="battery" label="Device Battery Level" value={batteryLevel} min={0} max={100} />
-        ) : (
-          <Meter value={65} min={0} max={100} low={30} high={80} optimum={90} label="Mock Battery Level" />
-        )
-      }
-    </article>
+
+      {batteryLevel !== null && (
+        <>
+          <Meter id="battery" label="Your Device Battery Level" value={batteryLevel} min={0} max={100} />
+          <br />
+        </>
+      )}
+      <Meter value={25} min={0} max={100} low={30} high={80} optimum={90} label="Low Level Meter" />
+      <br />
+      <Meter value={50} min={0} max={100} low={30} high={80} optimum={90} label="High Level Meter" />
+      <br />
+      <Meter value={85} min={0} max={100} low={30} high={80} optimum={90} label="Optimum Level Meter" />
+    </article >
   )
 };
 
