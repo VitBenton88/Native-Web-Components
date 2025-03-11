@@ -29,14 +29,19 @@ function App() {
 			<FileDropDemo />
 
 			<br />
-			<hr id='dropdown' />
+			<hr id='picture' />
 
-			<DropdownsDemo />
+			<PictureDemo />
 
 			<br />
 			<hr id='dialog' />
 
 			<DialogDemo />
+
+			<br />
+			<hr id='dropdown' />
+
+			<DropdownsDemo />
 
 			<br />
 			<hr id='progressbar' />
@@ -52,11 +57,6 @@ function App() {
 			<hr id='codeblock' />
 
 			<CodeBlockDemo />
-
-			<br />
-			<hr id='picture' />
-
-			<PictureDemo />
 		</>
 	)
 }
