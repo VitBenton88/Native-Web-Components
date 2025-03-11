@@ -24,37 +24,37 @@ function App() {
 			</header>
 
 			<br />
-			<hr />
+			<hr id='filedrop' />
 
 			<FileDropDemo />
 
 			<br />
-			<hr />
+			<hr id='dropdown' />
 
 			<DropdownsDemo />
 
 			<br />
-			<hr />
+			<hr id='dialog' />
 
 			<DialogDemo />
 
 			<br />
-			<hr />
+			<hr id='progressbar' />
 
 			<ProgressBarDemo />
 
 			<br />
-			<hr />
+			<hr id='meter' />
 
 			<MeterDemo />
 
 			<br />
-			<hr />
+			<hr id='codeblock' />
 
 			<CodeBlockDemo />
 
 			<br />
-			<hr />
+			<hr id='picture' />
 
 			<PictureDemo />
 		</>
