@@ -1,6 +1,6 @@
 import React from "react";
 
-interface MeterProps {
+export interface MeterProps {
   value: number;
   min?: number;
   max?: number;
@@ -18,12 +18,12 @@ const Meter: React.FC<MeterProps> = ({
   low,
   high,
   optimum,
-  label = "Progress",
+  label,
   id = "meter", // Default id if not provided
 }) => {
   return (
     <>
-      {label && <label htmlFor={id}>{label}</label>}
+      {label && <label htmlFor={id} data-testid='label'>{label}</label>}
       <br />
       <meter
         id={id}
@@ -33,6 +33,7 @@ const Meter: React.FC<MeterProps> = ({
         low={low}
         high={high}
         optimum={optimum}
+        data-testid='meter'
       >
         {value}%
       </meter>
