@@ -8,6 +8,7 @@ interface MeterProps {
   high?: number;
   optimum?: number;
   label?: string;
+  id?: string; // Add an optional id for accessibility
 }
 
 const Meter: React.FC<MeterProps> = ({
@@ -18,11 +19,14 @@ const Meter: React.FC<MeterProps> = ({
   high,
   optimum,
   label = "Progress",
+  id = "meter", // Default id if not provided
 }) => {
   return (
     <>
-      {label && <label>{label}</label>}
+      {label && <label htmlFor={id}>{label}</label>}
+      <br />
       <meter
+        id={id}
         value={value}
         min={min}
         max={max}
