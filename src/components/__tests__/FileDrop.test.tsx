@@ -11,7 +11,7 @@ describe('FileDrop', () => {
   const renderComponent = () => render(<FileDrop />);
 
   const elements = {
-    get dropzone() { return screen.queryByTestId('dropzone'); },
+    get dropzone() { return screen.getByTestId('dropzone'); },
   };
 
   afterEach(cleanup);
