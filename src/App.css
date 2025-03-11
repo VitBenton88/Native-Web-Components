@@ -69,10 +69,17 @@ dialog::backdrop {
 	transform: scale(2);
 }
 
+@media (prefers-color-scheme: light) {
+	.file-drop {
+		background-color: palegoldenrod;
+		border-color: rebeccapurple;
+	}
+}
+
 /* Code Block
    ========================================================================= */
 pre {
-	background-color: darkslategrey;
+	background-color: rebeccapurple;
 	border-radius: 1em;
 	line-height: 1.2em;
 	max-width: 100%;
@@ -80,4 +87,10 @@ pre {
 	overflow-x: auto;
 	text-align: justify;
 	white-space: pre-wrap;
+}
+
+@media (prefers-color-scheme: light) {
+	pre {
+		background-color: palegoldenrod;
+	}
 }
