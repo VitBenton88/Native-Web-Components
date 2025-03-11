@@ -14,9 +14,9 @@ describe('ProgressBar', () => {
   };
 
   const elements = {
-    get label() { return screen.getByTestId('label'); },
-    get percentage() { return screen.getByTestId('percentage'); },
-    get progress() { return screen.getByTestId('progress-bar'); },
+    get label() { return screen.queryByTestId('label'); },
+    get percentage() { return screen.queryByTestId('percentage'); },
+    get progress() { return screen.queryByTestId('progress-bar'); },
   };
 
   afterEach(cleanup);

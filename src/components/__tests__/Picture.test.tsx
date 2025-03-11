@@ -28,8 +28,8 @@ describe('Picture', () => {
     render(<Picture img={img} sources={sources} />);
 
   const elements = {
-    get image() { return screen.getByTestId('img'); },
-    get picture() { return screen.getByTestId('picture'); },
+    get image() { return screen.queryByTestId('img'); },
+    get picture() { return screen.queryByTestId('picture'); },
     get sources() { return screen.queryAllByTestId('source'); },
   };
 
