@@ -16,8 +16,19 @@ interface NavigatorWithBattery extends Navigator {
   getBattery(): Promise<BatteryManager>;
 }
 
+type MeterProps = {
+  value: number;
+  label: string;
+};
+
 const MeterDemo: React.FC = () => {
   const [batteryLevel, setBatteryLevel] = useState<number | null>(null);
+
+  const meterData: MeterProps[] = [
+    { value: 25, label: "Low Level Meter" },
+    { value: 50, label: "High Level Meter" },
+    { value: 85, label: "Optimum Level Meter" },
+  ];
 
   useEffect(() => {
     // Check if Battery API is available and use proper type casting
@@ -53,11 +64,12 @@ const MeterDemo: React.FC = () => {
           <br />
         </>
       )}
-      <Meter value={25} min={0} max={100} low={30} high={80} optimum={90} label="Low Level Meter" />
-      <br />
-      <Meter value={50} min={0} max={100} low={30} high={80} optimum={90} label="High Level Meter" />
-      <br />
-      <Meter value={85} min={0} max={100} low={30} high={80} optimum={90} label="Optimum Level Meter" />
+      {meterData.map(({ value, label }, index) => (
+        <div key={index}>
+          <Meter value={value} min={0} max={100} low={30} high={80} optimum={90} label={label} />
+          <br />
+        </div>
+      ))}
     </article >
   )
 };
