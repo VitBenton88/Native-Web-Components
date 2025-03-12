@@ -3,6 +3,7 @@ import ReactSvg from './assets/react.svg'
 import TypeScriptSvg from './assets/ts.svg'
 
 import CodeBlockDemo from "./demos/CodeBlockDemo"
+import DatePickerDemo from "./demos/DatePickerDemo"
 import DialogDemo from "./demos/DialogDemo"
 import DropdownsDemo from "./demos/DropdownsDemo"
 import FileDropDemo from "./demos/FileDropDemo"
@@ -58,6 +59,11 @@ function App() {
 			<hr id='meter' />
 
 			<MeterDemo />
+
+			<br />
+			<hr id='datepicker' />
+
+			<DatePickerDemo />
 
 			<br />
 			<hr id='codeblock' />

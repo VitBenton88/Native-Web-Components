@@ -2,7 +2,7 @@
   "name": "native-web-components",
   "private": true,
   "homepage": "https://vitbenton88.github.io/Native-Web-Components/",
-  "version": "1.6.8",
+  "version": "1.7.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
