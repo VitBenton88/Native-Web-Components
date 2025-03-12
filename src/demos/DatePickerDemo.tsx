@@ -3,19 +3,22 @@ import DatePicker from '../components/DatePicker'
 
 const DatePickerDemo: React.FC = (): React.ReactNode => {
 	const [selectedDate, setSelectedDate] = useState('')
-	const selectedDateToPrint = useMemo(() => selectedDate, [selectedDate])
+	const selectedDateToPrint = useMemo(() => {
+		const parts = selectedDate.split('-')
+
+		return new Date(
+			parseInt(parts[0]),
+			parseInt(parts[1]) - 1, // Add 1 to compensate for the timezone issue
+			parseInt(parts[2]),
+		).toLocaleDateString('en-US', {
+			month: 'long',
+			day: 'numeric',
+			year: 'numeric',
+		})
+	}, [selectedDate])
 
 	const handleDateChange = (value: string): void => {
-		if (value) { // 'YYYY-MM-DD' format
-			const formattedDate = new Date(value).toLocaleDateString('en-US', {
-				month: 'long',
-				day: 'numeric',
-				year: 'numeric',
-			})
-			setSelectedDate(formattedDate)
-		} else {
-			setSelectedDate('');
-		}
+		setSelectedDate(value)
 	}
 
 	return (
