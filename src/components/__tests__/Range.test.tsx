@@ -5,7 +5,7 @@ const mockDefaultProps: RangeProps = { value: 50, min: 0, max: 100, onChange: vi
 const mockTickMarks = [1, 2, 3];
 
 describe('Range', () => {
-	const renderComponent = (propData: RangeProps = mockDefaultProps) =>
+	const renderComponent = (propData = mockDefaultProps) =>
 		render(<Range {...propData} />);
 
 	const elements = {
