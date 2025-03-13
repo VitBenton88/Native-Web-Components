@@ -19,8 +19,8 @@ describe('Dialog', () => {
 	);
 
 	const elements = {
-		get dialog() { return screen.queryByTestId('dialog'); },
-		get mockChildren() { return screen.queryByTestId('mock-child-node'); },
+		get dialog() { return screen.getByTestId('dialog'); },
+		get mockChildren() { return screen.getByTestId('mock-child-node'); },
 	};
 
 	afterEach(cleanup);

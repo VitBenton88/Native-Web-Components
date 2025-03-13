@@ -8,7 +8,7 @@ describe('DatePicker', () => {
 		render(<DatePicker {...propData} />);
 
 	const elements = {
-		get dateInput() { return screen.queryByTestId('dateInput'); },
+		get dateInput() { return screen.getByTestId('dateInput'); },
 		get label() { return screen.queryByTestId('label'); },
 	};
 

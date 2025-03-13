@@ -11,7 +11,7 @@ describe('Range', () => {
 	const elements = {
 		get datalist() { return screen.queryByTestId('datalist'); },
 		get dataOptions() { return screen.queryAllByTestId('dataOption'); },
-		get rangeInput() { return screen.queryByTestId('rangeInput'); },
+		get rangeInput() { return screen.getByTestId('rangeInput'); },
 	};
 
 	afterEach(cleanup);

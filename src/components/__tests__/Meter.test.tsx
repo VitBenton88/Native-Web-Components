@@ -9,7 +9,7 @@ describe('Meter', () => {
 
 	const elements = {
 		get label() { return screen.queryByTestId('label'); },
-		get meter() { return screen.queryByTestId('meter'); },
+		get meter() { return screen.getByTestId('meter'); },
 	};
 
 	afterEach(cleanup);

@@ -8,8 +8,8 @@ describe('DetailsDropdown', () => {
 		render(<DetailsDropdown body={body} title={title} />);
 
 	const elements = {
-		get details() { return screen.queryByTestId('details'); },
-		get summary() { return screen.queryByTestId('summary'); },
+		get details() { return screen.getByTestId('details'); },
+		get summary() { return screen.getByTestId('summary'); },
 	};
 
 	afterEach(cleanup);
