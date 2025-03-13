@@ -1,7 +1,7 @@
 import './App.css'
 import ReactSvg from './assets/react.svg'
 import TypeScriptSvg from './assets/ts.svg'
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import CodeBlockDemo from "./demos/CodeBlockDemo"
 import DatePickerDemo from "./demos/DatePickerDemo"
@@ -14,17 +14,19 @@ import RangeDemo from "./demos/RangeDemo"
 import MeterDemo from "./demos/MeterDemo"
 
 function App() {
-	const demos = [
-		{ id: 'filedrop', component: <FileDropDemo /> },
-		{ id: 'picture', component: <PictureDemo /> },
-		{ id: 'dialog', component: <DialogDemo /> },
-		{ id: 'dropdown', component: <DropdownsDemo /> },
-		{ id: 'progressbar', component: <ProgressBarDemo /> },
-		{ id: 'range', component: <RangeDemo /> },
-		{ id: 'meter', component: <MeterDemo /> },
-		{ id: 'datepicker', component: <DatePickerDemo /> },
-		{ id: 'codeblock', component: <CodeBlockDemo /> },
-	]
+	const demos = useMemo(() =>
+		[
+			{ id: 'filedrop', component: <FileDropDemo /> },
+			{ id: 'picture', component: <PictureDemo /> },
+			{ id: 'dialog', component: <DialogDemo /> },
+			{ id: 'dropdown', component: <DropdownsDemo /> },
+			{ id: 'progressbar', component: <ProgressBarDemo /> },
+			{ id: 'range', component: <RangeDemo /> },
+			{ id: 'meter', component: <MeterDemo /> },
+			{ id: 'datepicker', component: <DatePickerDemo /> },
+			{ id: 'codeblock', component: <CodeBlockDemo /> },
+		]
+		, [])
 
 	return (
 		<>
