@@ -40,13 +40,15 @@ function App() {
 				</div>
 			</header>
 
-			{demos.map(({ id, component }) => (
-				<React.Fragment key={id}>
-					<br />
-					<hr id={id} />
-					{component}
-				</React.Fragment>
-			))}
+			<main>
+				{demos.map(({ id, component }) => (
+					<React.Fragment key={id}>
+						<br />
+						<hr id={id} />
+						{component}
+					</React.Fragment>
+				))}
+			</main>
 		</>
 	)
 }
