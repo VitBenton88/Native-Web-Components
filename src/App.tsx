@@ -1,6 +1,7 @@
 import './App.css'
 import ReactSvg from './assets/react.svg'
 import TypeScriptSvg from './assets/ts.svg'
+import React from 'react'
 
 import CodeBlockDemo from "./demos/CodeBlockDemo"
 import DatePickerDemo from "./demos/DatePickerDemo"
@@ -13,6 +14,18 @@ import RangeDemo from "./demos/RangeDemo"
 import MeterDemo from "./demos/MeterDemo"
 
 function App() {
+	const demos = [
+		{ id: 'filedrop', component: <FileDropDemo /> },
+		{ id: 'picture', component: <PictureDemo /> },
+		{ id: 'dialog', component: <DialogDemo /> },
+		{ id: 'dropdown', component: <DropdownsDemo /> },
+		{ id: 'progressbar', component: <ProgressBarDemo /> },
+		{ id: 'range', component: <RangeDemo /> },
+		{ id: 'meter', component: <MeterDemo /> },
+		{ id: 'datepicker', component: <DatePickerDemo /> },
+		{ id: 'codeblock', component: <CodeBlockDemo /> },
+	]
+
 	return (
 		<>
 			<header>
@@ -25,50 +38,13 @@ function App() {
 				</div>
 			</header>
 
-			<br />
-			<hr id='filedrop' />
-
-			<FileDropDemo />
-
-			<br />
-			<hr id='picture' />
-
-			<PictureDemo />
-
-			<br />
-			<hr id='dialog' />
-
-			<DialogDemo />
-
-			<br />
-			<hr id='dropdown' />
-
-			<DropdownsDemo />
-
-			<br />
-			<hr id='progressbar' />
-
-			<ProgressBarDemo />
-
-			<br />
-			<hr id='range' />
-
-			<RangeDemo />
-
-			<br />
-			<hr id='meter' />
-
-			<MeterDemo />
-
-			<br />
-			<hr id='datepicker' />
-
-			<DatePickerDemo />
-
-			<br />
-			<hr id='codeblock' />
-
-			<CodeBlockDemo />
+			{demos.map(({ id, component }) => (
+				<React.Fragment key={id}>
+					<br />
+					<hr id={id} />
+					{component}
+				</React.Fragment>
+			))}
 		</>
 	)
 }
