@@ -1,6 +1,6 @@
 import FileDrop from "../components/FileDrop";
 
-const FileDropDemo: React.FC = (): React.ReactNode => {
+const FileDropDemo: React.FC = () => {
 
 	return (
 		<article>

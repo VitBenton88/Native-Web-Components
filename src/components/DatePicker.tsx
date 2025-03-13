@@ -22,7 +22,7 @@ const DatePicker: React.FC<DateInputProps> = ({
   required = false,
   disabled = false,
   onChange,
-}): React.ReactNode => {
+}) => {
   const [date, setDate] = useState(value)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {

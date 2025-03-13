@@ -1,6 +1,6 @@
 import CodeBlock from "../components/CodeBlock";
 
-const CodeBlockDemo: React.FC = (): React.ReactNode => {
+const CodeBlockDemo: React.FC = () => {
 	const codeString = `
 () => console.log("Hello, world!")
 	`;

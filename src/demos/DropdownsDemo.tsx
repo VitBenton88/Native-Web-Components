@@ -1,6 +1,6 @@
 import DetailsDropdown from "../components/DetailsDropdown";
 
-const DropdownsDemo: React.FC = (): React.ReactNode => {
+const DropdownsDemo: React.FC = () => {
 
 	return (
 		<article>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Dialog from "../components/Dialog"
 
-const DialogDemo: React.FC = (): React.ReactNode => {
+const DialogDemo: React.FC = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [isModalDialogOpen, setIsModalDialogOpen] = useState(false);
 

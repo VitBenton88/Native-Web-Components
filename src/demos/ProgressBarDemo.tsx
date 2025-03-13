@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProgressBar from "../components/ProgressBar";
 
-const ProgressBarDemo: React.FC = (): React.ReactNode => {
+const ProgressBarDemo: React.FC = () => {
 	const [progressValue, setProgressValue] = useState(50);
 
 	return (

@@ -6,7 +6,7 @@ type MeterProps = {
   label: string;
 }
 
-const MeterDemo: React.FC = (): React.ReactNode => {
+const MeterDemo: React.FC = () => {
   const meterData: MeterProps[] = [
     { value: 25, label: "Low Level Meter" },
     { value: 50, label: "High Level Meter" },

@@ -25,7 +25,7 @@ type CodeBlockProps = {
   language: Language;
 };
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }): React.ReactNode => {
+const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }) => {
   return (
     <pre>
       <code data-testid='codeCanvas' className={`language-${language}`}>{code}</code>

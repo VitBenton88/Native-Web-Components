@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import DatePicker from '../components/DatePicker'
 
-const DatePickerDemo: React.FC = (): React.ReactNode => {
+const DatePickerDemo: React.FC = () => {
 	const [selectedDate, setSelectedDate] = useState('')
 	const selectedDateToPrint = useMemo(() => {
 		const parts = selectedDate.split('-')

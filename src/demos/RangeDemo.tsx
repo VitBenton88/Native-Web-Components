@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import RangeSlider from "../components/Range"
 
-const RangeDemo: React.FC = (): React.ReactNode => {
+const RangeDemo: React.FC = () => {
   const [value, setValue] = useState(50)
 
   return (
