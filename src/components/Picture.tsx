@@ -53,7 +53,7 @@ const Picture: React.FC<PictureProps> = ({ img, sources }) => {
 
   return (
     <picture data-testid='picture'>
-      {sources?.length ? sources.map(mapSources) : null}
+      {!!sources?.length && sources.map(mapSources)}
 
       <img
         alt={img.alt}
