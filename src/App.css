@@ -69,6 +69,16 @@ dialog::backdrop {
 	transform: scale(2);
 }
 
+@media (max-width: 767px) {
+	#filedrop {
+		display: none;
+	}
+
+	#filedrop+article {
+		display: none;
+	}
+}
+
 @media (prefers-color-scheme: light) {
 	.file-drop {
 		background-color: palegoldenrod;
