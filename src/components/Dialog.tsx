@@ -28,6 +28,20 @@ const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, is
     }
   };
 
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (isOpen && useModal && e.key === 'Escape') {
+        handleClose(); // default modal closes on esc key
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [isOpen, useModal, handleClose])
+
   const classNames = useModal ? 'modal' : '';
 
   return (
