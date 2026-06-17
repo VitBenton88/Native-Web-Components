@@ -1,4 +1,4 @@
-# React Native Web Components
+# Native Web Components
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%23007ACC.svg)](https://www.typescriptlang.org/)
@@ -7,9 +7,23 @@
 
 **A collection of accessible React components built with native HTML5 elements for modern and performant web applications.**
 
+[Live Demo](https://vitbenton88.github.io/Native-Web-Components/)
+
 ## Description
 
 This repository contains a set of React components meticulously crafted using semantic HTML5 elements. The goal is to provide lightweight, performant, and inherently accessible UI building blocks that seamlessly integrate into any React project. Leveraging native HTML5 ensures optimal browser rendering and reduces reliance on heavy JavaScript abstractions, resulting in a faster and more user-friendly experience.
+
+## Components
+
+- **CodeBlock** — syntax-highlighted code display via `<pre>`/`<code>`
+- **DatePicker** — accessible date input wrapping `<input type="date">`
+- **DetailsDropdown** — collapsible content via `<details>`/`<summary>`
+- **Dialog** — modal and non-modal dialogs via `<dialog>`
+- **FileDrop** — drag-and-drop file upload zone
+- **Meter** — gauge display via `<meter>`
+- **Picture** — responsive images via `<picture>`/`<source>`
+- **ProgressBar** — progress indicator via `<progress>`
+- **Range** — slider input via `<input type="range">` with optional datalist tick marks
 
 ## Key Features
 
@@ -18,7 +32,7 @@ This repository contains a set of React components meticulously crafted using se
 *   **TypeScript-Powered:** Developed with TypeScript for enhanced type safety, maintainability, and developer experience.  Leverages modern React patterns and best practices.
 *   **Accessible by Default:** Focus on accessibility from the ground up, adhering to WCAG guidelines.
 *   **Easy to Customize:** Simple and intuitive API for easy integration and customization within your React application.
-*   **Comprehensive Unit Tests:** Rigorously tested with Jest and React Testing Library to ensure reliability and prevent regressions.
+*   **Comprehensive Unit Tests:** Rigorously tested with Vitest and React Testing Library to ensure reliability and prevent regressions.
 
 ## Usage
 
