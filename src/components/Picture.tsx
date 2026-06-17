@@ -36,7 +36,7 @@ export interface ImageData {
   width?: string;
   loadingStrategy?: 'eager' | 'lazy';
   src: string;
-  srcset?: MediaQueryTypes;
+  srcset?: SrcsetStringType;
   sizes?: string;
 }
 

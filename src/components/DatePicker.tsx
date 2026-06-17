@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export interface DateInputProps {
   id?: string;
@@ -24,6 +24,10 @@ const DatePicker: React.FC<DateInputProps> = ({
   onChange,
 }) => {
   const [date, setDate] = useState(value)
+
+  useEffect(() => {
+    setDate(value);
+  }, [value]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const newValue = event.target.value;

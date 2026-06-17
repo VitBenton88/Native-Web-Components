@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 
 type DialogProps = {
   children?: React.ReactNode;
@@ -22,16 +22,14 @@ const Dialog: React.FC<DialogProps> = ({ children, onClose, useModal = false, is
     }
   }, [isOpen, useModal]);
 
-  const handleClose = () => {
-    if (onClose) {
-      onClose();
-    }
-  };
+  const handleClose = useCallback(() => {
+    onClose();
+  }, [onClose]);
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (isOpen && useModal && e.key === 'Escape') {
-        handleClose(); // default modal closes on esc key
+        handleClose();
       }
     };
 

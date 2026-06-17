@@ -23,8 +23,12 @@ const Meter: React.FC<MeterProps> = ({
 }) => {
   return (
     <>
-      {label && <label htmlFor={id} data-testid='label'>{label}</label>}
-      <br />
+      {label && (
+        <>
+          <label htmlFor={id} data-testid='label'>{label}</label>
+          <br />
+        </>
+      )}
       <meter
         id={id}
         value={value}
