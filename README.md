@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/VitBenton88/Native-Web-Components/actions)
 
-**A collection of accessible React components built with native HTML5 elements for modern and performant web applications.**
+**A collection of lightweight React components built on native HTML5 elements to create intuitive and accessible user interfaces. Written in TypeScript for maintainability, with unit tests for reliability.**
 
 [Live Demo](https://vitbenton88.github.io/Native-Web-Components/)
 
