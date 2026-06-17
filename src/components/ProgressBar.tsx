@@ -25,7 +25,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 	const percentage = useMemo((): number => Math.min(Math.max((value / max) * 100, 0), 100), [value, max]) // Set percentage between 0 and 100
 	const percentToPrint = useMemo((): string => `${percentage.toFixed(0)}%`, [percentage])
 	// Cached methods
-	const renderLabel = useCallback((): React.ReactNode => (label ??
+	const renderLabel = useCallback((): React.ReactNode => (label &&
 		<label className='progress-bar-label' htmlFor='progress-bar' data-testid='label'>
 			{label}
 		</label>
